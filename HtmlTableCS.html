@@ -1,16 +1,32 @@
 <html>
 <style>
-table, th, td {
-  border:1px solid black;
-}
-tr:nth-child(even) {
-  background-color: #f4f4f4;
-}
-td {
-  vertical-align: middle;
-}
+
+  table, th, td {
+    border:1px solid black;
+    padding: 10px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f4f4f4;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  .taken {
+    background-color: #DAFFD5; /* light green */
+  }
+
+  .not-taken {
+    background-color: #FFD1DC; /* light red */
+  }
+
+
 </style>
 <body>
+
+  <div id="COMSC-">
 <table style="width:60%">
   <tr>
     <th>Requirement</th>
@@ -19,76 +35,104 @@ td {
 
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>COMSC-151</td>
-    <td colspan="2"><input type="checkbox" value = "COMSC-151" onclick = "updateStatus(value)"> COMSC-151</td>
-    <td><p id="COMSC-151">0/1</p></td>
+    <td colspan="2"><p value = "COMSC-151">COMSC-151</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>COMSC-205</td>
-    <td colspan="2"><input type="checkbox" value = "COMSC-205" onclick = "updateStatus(value)"> COMSC-205</td>
-    <td><p id="COMSC-205">0/1</p></td>
+    <td colspan="2"><p value = "COMSC-205">COMSC-205</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>COMSC-221</td>
-    <td colspan="2"><input type="checkbox" value = "COMSC-221" onclick = "updateStatus(value)"> COMSC-221</td>
-    <td><p id="COMSC-221"> 0/1</p></td>
+    <td colspan="2"><p value = "COMSC-221">COMSC-221</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>COMSC-225</td>
-    <td colspan="2"><input type="checkbox" value = "COMSC-225" onclick = "updateStatus(value)"> COMSC-225</td>
-    <td><p id="COMSC-225"> 0/1</p></td>
+    <td colspan="2"><p value = "COMSC-225">COMSC-225</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>COMSC-312</td>
-    <td colspan="2"><input type="checkbox" value = "COMSC-312" onclick = "updateStatus(value)"> COMSC-312</td>
-    <td><p id="COMSC-312"> 0/1</p></td>
-  </tr> 
+    <td colspan="2"><p value = "COMSC-312">COMSC-312</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
+  </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>COMSC-322</td>
-    <td colspan="2"><input type="checkbox" value = "COMSC-322" onclick = "updateStatus(value)"> COMSC-322</td>
-    <td><p id="COMSC-322"> 0/1</p></td>
+    <td colspan="2"><p value = "COMSC-322">COMSC-322</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>MATH-232</td>
-    <td colspan="2"><input type="checkbox" value = "MATH-232" onclick = "updateStatus(value)"> MATH-232</td>
-    <td><p id="MATH-232"> 0/1</p></td>
+    <td colspan="2"></p value = "MATH-232">MATH-232</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>One additional course at the 200 or 300 level</td>
-    <td>200 lvls:<br><p><input type="checkbox" value = "200/300" onclick = "updateStatus(value)"> COMSC-235<br><input type="checkbox" value = "200/300" onclick = "updateStatus(value)"> 
-        COMSC-243GP<br><input type="checkbox" value = "200/300" onclick = "updateStatus(value)"> COMSC-243HR<br><input type="checkbox" value = "200/300" onclick = "updateStatus(value)"> 
-        COMSC-243PC<br><input type="checkbox" value = "200/300" onclick = "updateStatus(value)"> COMSC-243ST<br><input type="checkbox" value = "200/300" onclick = "updateStatus(value)"> 
+    <td>200 lvls:<br><p><input type="checkbox" value = "200/300"> COMSC-235<br><input type="checkbox" value = "200/300">
+        COMSC-243GP<br><input type="checkbox" value = "200/300"> COMSC-243HR<br><input type="checkbox" value = "200/300">
+        COMSC-243PC<br><input type="checkbox" value = "200/300"> COMSC-243ST<br><input type="checkbox" value = "200/300">
         COMSC-295</p><br><br></td>
-    <td>300 lvls:<br><p><input type="checkbox" value = "300" onclick = "updateStatus(value)"> COMSC-311<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> 
-        COMSC-334<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> COMSC-335<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> 
-        COMSC-341CD<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> COMSC-341DV<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> 
-        COMSC-341NL<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> COMSC-341RP<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> 
-        COMSC-341TE<br><input type="checkbox" value = "300" onclick = "updateStatus(value)"> COMSC-395</p></td>
-    <td>0/1</td>
+    <td>300 lvls:<br><p><input type="checkbox" value = "300"> COMSC-311<br><input type="checkbox" value = "300">
+        COMSC-334<br><input type="checkbox" value = "300"> COMSC-335<br><input type="checkbox" value = "300">
+        COMSC-341CD<br><input type="checkbox" value = "300"> COMSC-341DV<br><input type="checkbox" value = "300">
+        COMSC-341NL<br><input type="checkbox" value = "300"> COMSC-341RP<br><input type="checkbox" value = "300">
+        COMSC-341TE<br><input type="checkbox" value = "300"> COMSC-395</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
 
-  <tr>
+  <tr style="background-color: #FFD1DC;">
     <td>Two additional courses at the 300 level</td>
-    <td colspan="2" vertical-align: top>300 lvls:<br><p><input type="checkbox"> COMSC-311<br><input type="checkbox"> COMSC-334<br><input type="checkbox"> COMSC-335<br><input type="checkbox"> COMSC-341CD<br><input type="checkbox"> COMSC-341DV<br><input type="checkbox"> COMSC-341NL<br><input type="checkbox"> COMSC-341RP<br><input type="checkbox"> COMSC-341TE<br><input type="checkbox"> COMSC-395</p></td>
-    <td>0/2</td>
+    <td colspan="2" vertical-align: top>300 lvls:<br>
+      <p><input type="checkbox"> COMSC-311<br>
+      <input type="checkbox"> COMSC-334<br>
+      <input type="checkbox"> COMSC-335<br>
+      <input type="checkbox"> COMSC-341CD<br>
+      <input type="checkbox"> COMSC-341DV<br>
+      <input type="checkbox"> COMSC-341NL<br>
+      <input type="checkbox"> COMSC-341RP<br>
+      <input type="checkbox"> COMSC-341TE<br>
+      <input type="checkbox"> COMSC-395</p></td>
+    <td><button onclick="switchStatus(this)">Not Taken</button></td>
   </tr>
+  </div>
 
   <script>
-    function updateStatus(value) {
+    function switchStatus(button) {
+      /* find the closest table row that contains button */
+      const row = button.closest("tr");
 
-        // Display the updated text
-          element = document.getElementById(value);
-          element.textContent = "1/1";
-
+      /* switch the button based on current status */
+      if (button.textContent === "Not Taken") {
+        button.textContent = "Taken";
+        row.classList.remove("not-taken");
+        row.classList.add("taken");
+        row.style.backgroundColor = "#DAFFD5";
+      } else {
+        button.textContent = "Not Taken";
+        row.classList.remove("taken");
+        row.classList.add("not-taken");
+        row.style.backgroundColor = "#FFD1DC";
+      }
     }
+
+    //WORK IN PROGRESS
+    function switchStatusCheck(value) {
+      if(document.getElementById(value).checked) {
+        switchStatus(button);
+      }
+    }
+
   </script>
 
 </table>
