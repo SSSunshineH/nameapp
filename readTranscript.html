@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            Read Transcript
+        </title>
+    </head>
+    <body>
+        <td>
+            <tr>
+                <label for="transcript">Enter the course code here (Example: COMSC-):</label><br>
+            </tr>
+            <tr>
+                 <input type="text" id="course" name="tr1"><br>
+            </tr>
+            <tr>
+                <label for="transcript">Enter your courses here:</label><br>
+            </tr>
+            <tr>
+                <input type="text" id="t1" name="tr1"><br>
+            </tr>
+            <tr>
+                <button onclick="read()">Submit</button><br>
+            </tr>
+            <tr>
+                <p id="t2"> </p><br>
+            </tr>
+        </td>
+
+        <script>
+            function read() {
+                //set the input to a variable
+                let transcript = document.getElementById("t1").value;
+
+                //find the course type
+                let value = document.getElementById("course").value;
+
+
+                //check if there are any of the course code courses
+                //make substrings of the courses
+                //print it onto the end of the text block
+
+                if (transcript.includes(value)) {
+                    //find the first intstance
+                    let first = transcript.indexOf(value, 0);
+                    //find the place after the first instance but before all we want to print
+                    let secondStart = first + 6;
+
+                    while(first != -1) {
+                        //update second
+                        let second = transcript.indexOf(value, secondStart);
+                        //what to do if it's the last course of this code in the string
+                        if (second == -1) {
+                            second = transcript.length;
+                        }
+
+                        //find the length of the substring that we want to print
+                        //update subLength
+                        let subLength = transcript.substring(first, second).length;
+                        //concat the substring we want to print to what already exists and print
+                        document.getElementById("t2").textContent = document.getElementById("t2").textContent + transcript.substring(first, second);
+                        //update first to be the next thing we want to print (second)
+                        first = transcript.indexOf(value, secondStart);
+                        //update secondStart
+                        secondStart = first + value.length;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
