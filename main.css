@@ -1,3 +1,11 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    flex-direction: column;
+  }
+
+
 h2 {
     display: flex;
     justify-content: center;
@@ -6,21 +14,73 @@ h2 {
     background-color:#034876;
     color:#fffffe;
     height: 15%;
-    width: 70%;
+    width: 90%;
     margin: auto;
     font-size: 2em;
-    margin-bottom: 30px;
+    margin-bottom: 30px auto;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 
 }
 
+.form-container {
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* left alignment */
+    gap: 20px;
+  }
+  
+
 question {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
     gap: 15px;
 }
 
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 5px;
+  }
+
+.optional-field label, .optional-field select {
+  color:#888;
+}
+.optional-field select:valid {
+  color: #333;
+}
+select option[value=""]:checked {
+  color: #888;
+}
+
+.select:focus, select:not(:empty){
+  color:#333;
+}
+select name[value=""]:checked {
+  color: #333;
+  border-radius: 8px;
+}
+
+
 label {
-    text-align: center;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.action-button {
+  background-color: #034876;
+  color: #fffffe;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.1em;
 }
