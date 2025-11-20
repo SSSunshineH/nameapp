@@ -8,34 +8,66 @@
 
 </head>
 
+
+
 <body>
     <h2>Mount Holyoke</h2>
-    
-    <question>
-        <label>What’s your major?
-            <input list="majors" name="major">
-        </label>
-    
-        <label>What’s your second major?
-            <input list="majors" name="major">
-        </label>
-    
-        <label>What’s your minor?
-            <input list="majors" name="major">
-        </label>
-    </question>
+
+    <form action="/action_page.php"  class="form-container">
+
+    <label>
+        Enter your degree:
+    </label>
     
 
-    <datalist id="majors">
-        <option value="Computer Science">
-        <option value="Mathematics">
-        <option value="Economics">
-        <option value="Accounting">
-        <option value="English">
-        <option value="Physics">
-    </datalist>
+    <div class ="form-row">
+        <label for="majors">Major</label>
+        <select name="majors" id="majors">
+            <option value="" disabled selected></option>
+            <option value="computerscience">Computer Science</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="anthropology">Anthropology</option>
+            <option value="physics">Physics</option>
+        </select>
+        <br><br>
+    </div>
 
 
+    <div class ="form-row optional-field">
+        <label for="major2">
+            <span class = "optional-symbol">+</span>
+            Second major 
+        </label>
+        <select name="major2" id="major2">
+            <option value="" disabled selected></option>
+            <option value="computerscience">Computer Science</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="anthropology">Anthropology</option>
+            <option value="physics">Physics</option>
+        </select>
+        <br><br>
+    </div>
+    
+    <div class ="form-row optional-field">
+        <label for="minor ">
+            <span class =  "optional-symbol">+</span>
+            Minor
+        </label>
+        <select name="majors" id="majors">
+            <option value="" disabled selected></option>
+            <option value="computerscience">Computer Science</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="anthropology">Anthropology</option>
+            <option value="physics">Physics</option>
+        </select>
+        <br><br>
+    </div>
+        <input type="submit" value="View the requirement" class="action-button">
+    </form>
+
+
+</form>
 </body>
+
 
 </html>
