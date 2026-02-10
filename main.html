@@ -5,42 +5,68 @@
         Main Page
     </title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
 
 </head>
+
+-
 
 <body>
     <h2>Mount Holyoke</h2>
 
-    <form action="/action_page.php">
-        <label for="majors">Major:</label>
+    <form action="file:///Users/sunshineh/nameapp/HtmlTableCS2.html"  class="form-container">
+
+    <label>
+        Enter your degree:
+    </label>
+    
+
+    <div class ="form-row">
+        <label for="majors">Major</label>
         <select name="majors" id="majors">
+            <option value="" disabled selected></option>
             <option value="computerscience">Computer Science</option>
             <option value="mathematics">Mathematics</option>
             <option value="anthropology">Anthropology</option>
             <option value="physics">Physics</option>
         </select>
-        <br><br>
-        <label for="majors">Second major:</label>
-        <select name="majors" id="majors">
+    </div>
+
+
+    <div class ="form-row optional-field">
+        <label for="major2">
+            <span class = "optional-symbol">+</span>
+            Second major 
+        </label>
+
+        <select name="major2" id="major2">
+            <option value="" disabled selected hidden></option>
             <option value="computerscience">Computer Science</option>
             <option value="mathematics">Mathematics</option>
             <option value="anthropology">Anthropology</option>
             <option value="physics">Physics</option>
         </select>
-        <br><br>
-        <label for="majors">Minor:</label>
-        <select name="majors" id="majors">
+    </div>
+    
+    <div class ="form-row optional-field">
+        <label for="minor">
+            <span class =  "optional-symbol">+</span>
+            Minor
+        </label>
+        <select name="minor" id="minor">
+            <option value="" disabled selected></option>
             <option value="computerscience">Computer Science</option>
             <option value="mathematics">Mathematics</option>
             <option value="anthropology">Anthropology</option>
             <option value="physics">Physics</option>
         </select>
-        <br><br>
-        <input type="submit" value="Submit">
+    </div>
+        <input type="submit" value="View the requirement" class="action-button">
     </form>
 
 
-
+</form>
 </body>
+
 
 </html>
