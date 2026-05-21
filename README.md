@@ -39,6 +39,11 @@ https://your-render-url.onrender.com
   <img src="./images/render.jpg" height="220" />
 </p>
 ---
+## Contributors
+
+Developed as a collaborative software engineering project for Google Developer Group (GDG) at Mount Holyoke College.
+
+---
 
 ## Future Improvements
 
