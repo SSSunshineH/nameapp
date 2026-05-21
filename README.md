@@ -24,10 +24,20 @@ A web-based tool that helps Mount Holyoke students visualize and track their deg
 ## Screenshots
 
 <p align="center">
-  <img src="./images/main_page.jpg" width="45%" alt="Main Page" />
-  <img src="./images/coursetable_page.jpg" width="45%" alt="Course Table Page" />
+  <img src="./images/main_page.jpg" height="260" alt="Main Page" />
+  <img src="./images/coursetable_page.jpg" height="260" alt="Course Table Page" />
 </p>
+---
 
+## Live Demo
+
+The project is deployed on Render:
+
+https://your-render-url.onrender.com
+
+<p align="center">
+  <img src="./images/render.jpg" height="220" />
+</p>
 ---
 
 ## Future Improvements
